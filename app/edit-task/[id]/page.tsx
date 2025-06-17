@@ -1,6 +1,7 @@
 import { auth } from "@/auth";
 import EditTask from "@/components/edit-task";
 import { prisma } from "@/prisma";
+import { TaskProps } from "@/types/task";
 import { Metadata } from "next";
 import { redirect } from "next/navigation";
 import React from "react";
@@ -24,7 +25,7 @@ export default async function Edit({
     <div>
       {task &&
         task.length > 0 &&
-        task.map((task, index) => <EditTask key={index} task={task} />)}
+        task.map((task:TaskProps, index) => <EditTask key={index} task={task} />)}
     </div>
   );
 }
