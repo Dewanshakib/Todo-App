@@ -36,6 +36,18 @@ yarn-error.log*
 # vercel
 .vercel
 
+# env
+.env
+.env.local
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/app/generated/prisma
+
+/app/generated/prisma
+
+/app/generated/prisma
+
+/app/generated/prisma
