@@ -1,6 +1,7 @@
 import { auth } from "@/auth";
 import Tasks from "@/components/tasks";
 import { prisma } from "@/prisma";
+import { TaskProps } from "@/types/task";
 import { Metadata } from "next";
 import { redirect } from "next/navigation";
 import React from "react";
@@ -22,8 +23,8 @@ export default async function Home() {
     <div>
       {tasks && tasks.length > 0 ? (
         <div className="">
-          {tasks.map((task, index) => (
-            <Tasks key={index} task={task} />
+          {tasks.map((task:TaskProps) => (
+            <Tasks key={task.id} task={task} />
           ))}
         </div>
       ) : (
