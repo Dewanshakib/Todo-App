@@ -21,7 +21,7 @@ export default function AddTaskFrom() {
       toast.success(state.message);
       router.push("/home");
     }
-  }, []);
+  }, [state.success]);
 
   return (
     <div className="p-5">

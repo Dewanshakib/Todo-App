@@ -22,7 +22,7 @@ export default function EditTask({ task }: { task: TaskProps }) {
       toast.success(state.message);
       return router.push("/home");
     }
-  }, []);
+  }, [state.success]);
 
   return (
     <div className="p-5">
