@@ -33,7 +33,7 @@ export default async function Edit({
 export const generateStaticParams = async () => {
   const tasks = await prisma.todo.findMany();
 
-  return tasks.map((task) => {
+  return tasks.map((task:TaskProps) => {
     return { id: task.id };
   });
 };
