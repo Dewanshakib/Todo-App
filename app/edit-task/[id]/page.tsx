@@ -25,7 +25,7 @@ export default async function Edit({
     <div>
       {task &&
         task.length > 0 &&
-        task.map((task:TaskProps, index) => <EditTask key={index} task={task} />)}
+        task.map((task:TaskProps) => <EditTask key={task.id} task={task} />)}
     </div>
   );
 }
