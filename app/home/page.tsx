@@ -22,7 +22,7 @@ export default async function Home() {
   return (
     <div>
       {tasks && tasks.length > 0 ? (
-        <div className="">
+        <div className="flex flex-col gap-3.5">
           {tasks.map((task:TaskProps) => (
             <Tasks key={task.id} task={task} />
           ))}
